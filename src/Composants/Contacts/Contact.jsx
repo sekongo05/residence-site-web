@@ -1,25 +1,9 @@
 import { useState } from 'react';
 import './contact.css'
+import InputField from '../InputField/InputField';
 let Contact = ()=>{
-    const [data, setData] = useState({
-        name: '',
-        email: '',
-    });
+   
 
-    const change =(e) =>{
-        const {name, value} = e.target
-        setData(prev => ({
-           ...prev,
-           [name]: value 
-        }))
-    };
-
-    const Submit = (e)=> {
-        e.preventDefault();
-        alert(`Nom : ${data.name}\nEmail : ${data.email}`)
-    }
-
-console.log(change.value)
 
 
     return <div className='h-[100vh] border-2 '>
