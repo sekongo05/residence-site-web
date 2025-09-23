@@ -1,6 +1,6 @@
 
 import './header_1.css'
-import { Component, Fragment } from 'react';
+import {  Fragment } from 'react';
 
 
 

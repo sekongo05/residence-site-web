@@ -1,4 +1,4 @@
-import { Component } from 'react';
+
 import './footer.css'
 
 let Footer = ()=>{
