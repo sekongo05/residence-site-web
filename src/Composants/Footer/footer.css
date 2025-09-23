@@ -1,0 +1,7 @@
+div p{
+    cursor: pointer;
+}
+
+div p img:hover{
+    scale: .95;
+}
