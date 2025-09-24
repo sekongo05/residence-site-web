@@ -1,7 +1,7 @@
 
 import './App.css';
 import {  Fragment } from 'react';
-import Header1 from './Composants/Header/header_1';
+import Header from './Composants/Header/header';
 import Container from './Composants/Container/container';
 import Footer from './Composants/Footer/footer'
 import Contact from './Composants/Contacts/Contact';
@@ -10,8 +10,8 @@ import Contact from './Composants/Contacts/Contact';
 
 let App = ()=>{
       return ( <Fragment>
-                  <Header1/>
-                  
+                  <Header/>
+                  <p className='h-[70px]'></p>
                   <Container/>
                   <Contact />
                   <Footer/>
