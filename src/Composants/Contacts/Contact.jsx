@@ -7,7 +7,7 @@ let Contact = ()=>{
 
 
 
-    return <div className='h-[100vh] border-2 ' id='contact'>
+    return <div className='h-[100vh]' id='contact'>
                 <p className='text-2xl font-bold  h-[100px] flex justify-center items-end ' >Envoyez nous un message</p>
                 <div className='h-[calc(100vh-150px)] flex justify-center items-center' >
 
