@@ -76,3 +76,34 @@ code {
 
 }
 }
+
+.affiche{
+    animation: affiche 1.2s ease-out forwards;
+    background: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+@keyframes affiche{
+0%{
+        transform: translatey(-50px) ;
+        opacity: 0;
+    }
+    25%{
+        opacity: .3;
+        transform: translatey(-5px)  ;
+    }
+    50%{
+        transform: translatey(0px)  ;
+        opacity: .6;
+    }
+    75%{
+        transform: translatey(0px)  ;
+        opacity: .85;
+    }
+    100%{
+        transform: translatey(0px) ;
+        opacity: 1;
+    }
+
+}

@@ -4,3 +4,10 @@ li{
     font-weight: bold;
     cursor: pointer;
 }
+li:hover{
+    color: rgb(251,146,60);
+}
+
+#sous{
+    display: none;
+}
