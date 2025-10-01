@@ -28,13 +28,15 @@ let Header1 = ()=>{
 
                 <div className='affiche overflow-hidden  flex mt-[70px] 
                 w-[100%] items-center h-[300px]  text-white justify-center z-40 fixed sm:hidden border-orange-950'>
-                    <ul className='flex flex-col  gap-[10px]  w-[200px] h-[200px] text-[25px] items-center justify-center' >
+                    <p className='w-[25%] '></p>
+                    <ul className='flex flex-col  gap-[10px]  w-[40%] h-[200px] text-[20px] items-center justify-center' >
                         {/* fermeture du menu a chaque clique sur un lien */}
                             <li><a href='#acceuil' onClick={()=> setMenuOpen(false)}>Acceuil</a></li>
                             <li><a href='#residence' onClick={()=> setMenuOpen(false)}>Résidences</a></li>
                             <li><a href='#contact' onClick={()=> setMenuOpen(false)}>Contacts</a></li>
                             <li><a href='#louer' onClick={()=> setMenuOpen(false)}>Louer</a></li>
                         </ul>
+                        <p className=' flex justify-end h-[250px] w-[30%]'><img src='Icons/f.png' alt='icon de fermeture' className='w-[26px] h-[30px]' onClick={()=> setMenuOpen(false)}/></p>
                 </div>
                 )}
             </Fragment>

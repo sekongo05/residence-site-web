@@ -80,7 +80,7 @@ code {
 .affiche{
     animation: affiche 1.2s ease-out forwards;
     background: black;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif   ;
 }
 
 
