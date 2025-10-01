@@ -8,7 +8,8 @@ let Contact = ()=>{
 
 
     return <div className='h-[100vh]' id='contact'>
-                <p className='text-2xl font-bold  h-[100px] flex justify-center items-end ' >Envoyez nous un message</p>
+                <p className='h-[100px]'></p>
+                <p className='text-2xl font-bold  h-[50px] flex justify-center items-end ' >Envoyez nous un message</p>
                 <div className='h-[calc(100vh-150px)] flex justify-center items-center' >
 
                 <div className='border-4 rounded-[10px] w-[450px] h-[90%] border-orange-500 '>

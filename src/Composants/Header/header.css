@@ -8,6 +8,6 @@ li:hover{
     color: rgb(251,146,60);
 }
 
-#sous{
-    display: none;
+.affiche li:hover{
+    font-size: 23px;
 }
