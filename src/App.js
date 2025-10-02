@@ -13,7 +13,6 @@ let App = ()=>{
       
       return ( <Fragment>
                   <Header/>
-                  <p className='h-[70px]'></p>
                   <Container/>
                   <ReContainer   />
                   <Contact />

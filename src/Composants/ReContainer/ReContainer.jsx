@@ -36,7 +36,7 @@ let ReContainer = ()=>{
 
     return <>
             <div className='h-min  ' id='residence'>
-                <div className='flex flex-col justify-center items-center  sm:items-start sm:pl-[15px]'>
+                <div className='flex flex-col justify-center items-center  sm:items-start sm:pl-[35px]'>
                     <p className='h-[100px]'></p>
                     <p className='text-orange-500 font-semibold text-[35px]'>Meilleurs Choix</p>
                     <p className='text-[35px] font-bold'>Residences Populaires</p>
