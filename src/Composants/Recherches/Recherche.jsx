@@ -39,7 +39,7 @@ let Recherche = ()=>{
                 name="recherche"
                 placeholder="Rechercher résidence"
                 /* onChange={handlechange} */
-                className='border-2 w-[400px] h-[70px] pl-3 rounded-xl flex items-center justify-between focus:outline-orange-400'
+                className='border-2 w-[300px] sm:w-[400px] h-[70px] pl-3 rounded-xl flex items-center justify-between focus:outline-orange-400'
                 />
           
                 <ul className="mt-4">

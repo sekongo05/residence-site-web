@@ -5,8 +5,8 @@ let Residence = ({resi})=>{
 
     return <>
     
-            <div className="   w-[400px] h-[450px] flex justify-between flex-col  sm:w-[300px] " >
-                <div  className="h-[300px] w-[400px] shadow-xl/30   rounded-t-[20px] rounded-b-[20px] flex justify-center items-center overflow-hidden sm:hover:scale-90  sm:w-[300px]">
+            <div className="   w-[80%] h-[450px] flex justify-between flex-col  sm:w-[300px] " >
+                <div  className="h-[300px] w-[100%] shadow-xl/30   rounded-t-[20px] rounded-b-[20px] flex justify-center items-center overflow-hidden sm:hover:scale-90  sm:w-[300px]">
                     <img src={img} alt={nom} className="object-cover shadow-lg w-full h-auto"/>
                 </div>
                 <div className="  flex   h-[150px] flex-col justify-center items-center ">
