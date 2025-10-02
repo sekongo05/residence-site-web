@@ -4,8 +4,8 @@ import Recherche from '../Recherches/Recherche';
 
 let Container = ()=>{
     
- return <div className=' flex flex-col justify-center  items-center z-0' id='acceuil'>
-            <p className=' h-[50px] sm:h-[100px]'></p>
+ return <div className=' flex flex-col justify-center  items-center z-0' id='acceuil' >
+            <p className=' h-[50px] sm:h-[100px]' id='haut'></p>
             <div className='h-min flex    justify-center items-center  flex-col  sm:justify-between sm:w-[80%] sm:flex-row'>
                 <div className='flex flex-col justify-center items-center  h-[80vh] texte  sm:w-[600px]'  >
                     <p className='text-[45px] text-center font-bold mr-[50px] ml-[50px]'>Decouvrez la residence de vos rêves</p>
