@@ -16,7 +16,7 @@ let Footer = ()=>{
                     <a href="#haut"><img src='Icons/up-arrow.png' className='w-[30px] cursor-pointer' alt="Aller vers le haut" /></a>
                 </div>
                 </div>
-                <p className='text-white text-[10px]   sm:text-[18px]'>Copyright &copy; 2025 par Sekongo Moussa | Tout droits reservés.</p>
+                <p className='text-white text-[10px]   sm:text-[18px]'>Copyright &copy; 2025 par Sekongo Moussa | Tous droits réservés.</p>
             </div>
 }
 
