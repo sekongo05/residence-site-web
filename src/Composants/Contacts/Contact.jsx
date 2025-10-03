@@ -15,7 +15,7 @@ let Contact = ()=>{
                         <form action=""  className=' gap-7  h-[100%] w-[100%] flex flex-col justify-center items-center  sm:w-[450px]'>
                             <InputField type='text' name='name' placeholder='Votre nom' />
                             <InputField type='email' name='email'placeholder='Votre email'  />
-                            <textarea placeholder='Votre message' className='sm:w-[350px] w-[80%] h-[200px] border-2 pl-2 focus:outline-orange-400' ></textarea>
+                            <textarea placeholder='Votre message' className='sm:w-[350px] shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[80%] h-[200px] border-2 pl-2 focus:outline-orange-500 sm:focus:outline-orange-400' ></textarea>
                             <Submit nom="Envoyer"/>
                         </form>
                     </div>

@@ -25,7 +25,7 @@ console.log(filtreData)
                 placeholder="Rechercher résidence"
                 /* l'événement qui se declenche lorsqu'on clique dans le input *setSearch * met a jour la valeur tapée dans le input */
                 onChange={e => setSearch(e.target.value)}
-                className='border-2 w-[300px] sm:w-[400px] h-[70px] pl-3 rounded-xl flex items-center justify-between focus:outline-orange-400'
+                className='border-2 w-[300px] sm:w-[400px] h-[70px] pl-3 rounded-xl flex items-center justify-between focus:outline-orange-500 sm:focus:outline-orange-400'
                 />
                
                    
