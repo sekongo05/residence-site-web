@@ -1,54 +1,57 @@
 import { useEffect, useState } from "react";
 
 
-let Recherche = ()=>{
-/*    const [residence, setResidence] = useState([]);
-   const [error, setError] = useState(null);
-   const [recherche, setRecherche] = useState(true);
+let Recherche = ({data})=>{
+    const [search, setSearch]= useState('');
 
+    /* fonction permettant de decomposé les mots grace a normalize puis de remplacer les accent en espace vide */
+    const remvAccent = (mot)=>{
+       
+       return mot.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
 
+    const filtreData = data.filter(d => 
+       remvAccent( d.commune).toLowerCase().includes(search.toLocaleLowerCase()) || d.prix.includes(search)
+    );
+console.log(filtreData)
+  
+ 
 
-   useEffect(()=>{
-       const fetchresidence = async ()=>{
-        try{
-            const res= await fetch ('https://api.open-meteo.com/v1/forecast?latitude=5.34&longitude=-4.03&current=temperature_2m');
-            const data = await res.json();
-            console.log(data)
-
-            setResidence(data.current.temperature_2m);
-
-        }catch(err){
-            setError("Impossible")
-        }finally{
-            setRecherche(false)
-        }
-       };
-       fetchresidence()
-
-   }, []);
-   if(recherche) return <p> Chargement de la residence... </p>
-   if(error) return <p>{error}</p>
-
-   const handlechange= (event) => {
-        console.log(event.target.value);
-    }; */
-
-    return <div>
+    return <div className=" flex flex-col justify-center items-center w-[400px] sm:w-[500px]">
                 <input 
                 type="text"
                 name="recherche"
+                value={search}
                 placeholder="Rechercher résidence"
-                /* onChange={handlechange} */
+                /* l'événement qui se declenche lorsqu'on clique dans le input *setSearch * met a jour la valeur tapée dans le input */
+                onChange={e => setSearch(e.target.value)}
                 className='border-2 w-[300px] sm:w-[400px] h-[70px] pl-3 rounded-xl flex items-center justify-between focus:outline-orange-400'
                 />
+               
+                   
+
+                <ul className="mt-4   h-[100px] text-[12px] w-[80%] flex flex-col justify-start  overflow-y-auto  sm:text-[16px]">
+                            {search !== "" ?(
+                                filtreData.length >0 ?(
+
+                                    filtreData.map((item) => (
+                                        <li key={item.id}> 
+                                            {item.nom} - <span className="text-orange-500"> {item.prix} Fcfa </span><span className="font-light">({item.commune})</span> 
+                                        </li>
+                                    ))): (
+                                        <li>Aucune résidence trouvé </li>
+                                )):(
+
+                                        <li></li>
+                                )
           
-                <ul className="mt-4">
-                            <li className="text-gray-700"> 
-                                <span className="font-semibold text-orange-400"></span>
-                            </li>
+                            }
+                            
+                           
                 </ul>
-               {/*  <h2>La météo d'abidjan est </h2>
-                <p>{residence}°C</p> */}
+                    
+                
+               
             </div>
 }
 
