@@ -38,7 +38,7 @@ let Header1 = ()=>{
                             <li><a href='#contact' onClick={()=> setMenuOpen(false)}>Contacts</a></li>
                             <li><a href='#louer' onClick={()=> setMenuOpen(false)}>Louer</a></li>
                         </ul>
-                        <p className=' flex  justify-end h-[250px] w-[25%]'><img src='Icons/f.png' alt='icon de fermeture' className='w-[26px] h-[30px]' onClick={()=> setMenuOpen(false)}/></p>
+                        <p className=' flex justify-end h-[200px] w-[25%]'><img src='Icons/f.png' alt='icon de fermeture' className='w-[26px] h-[30px]' onClick={()=> setMenuOpen(false)}/></p>
                 </div>
                 )}
             </Fragment>
