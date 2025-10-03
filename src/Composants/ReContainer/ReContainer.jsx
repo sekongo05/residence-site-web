@@ -7,33 +7,34 @@ let ReContainer = ()=>{
                   'img': 'Images/v1.jpg',
                   'nom': 'Résidence Nova',
                   'commune' : 'Plateau',
-                  'prix': '100.000',
+                  'prix': '150.000',
                   'description': 'La Résidence Nova allie design contemporain et confort absolu. Chaque appartement est équipé de la fibre optique, d’un mobilier épuré et d’une cuisine ouverte sur le salon. Idéale pour les professionnels en déplacement ou les couples en quête de modernité.'
             },
             {
                   'id': 2,
+                  'img': 'Images/v4.jpg',
+                  'nom': 'Résidence Assinie Bleu',
+                  'commune' : 'Assinie',
+                  'prix': '150.000',
+                  'description': 'À quelques pas de la plage, la Résidence Assinie Bleu vous plonge dans une ambiance tropicale. Piscine privée, hamac sous les palmiers, chambres ventilées et vue sur l’océan : le luxe discret d’un séjour balnéaire.'
+            },
+            {
+                  'id': 3,
                   'img': 'Images/v5.jpg',
                   'nom': 'Résidence Ébène',
-                  'prix': '90.000',
+                  'prix': '130.000',
                   'commune' : 'Cocody',
                   'description': 'Nichée dans un quartier calme de Cocody, la Résidence Ébène offre un cadre verdoyant et apaisant. Avec ses 3 chambres climatisées, son jardin privé et son mobilier en bois noble, elle séduit les amateurs de raffinement et de sérénité.'
             },
             {
-                  'id': 3,
+                  'id': 4,
                   'img': 'Images/v3.jpg',
                   'nom': 'Résidence Connect',
                   'commune' : 'Cocody',
-                  'prix': '70.000',
+                  'prix': '110.000',
                   'description': 'Pensée pour les séjours professionnels, la Résidence Connect propose des studios fonctionnels avec espace de travail, Wi-Fi haut débit, service de conciergerie et accès rapide aux zones d’affaires. Un confort discret, une efficacité maximale'
             },
-            {
-                  'id': 4,
-                  'img': 'Images/v4.jpg',
-                  'nom': 'Résidence Assinie Bleu',
-                  'commune' : 'Assinie',
-                  'prix': '100.000',
-                  'description': 'À quelques pas de la plage, la Résidence Assinie Bleu vous plonge dans une ambiance tropicale. Piscine privée, hamac sous les palmiers, chambres ventilées et vue sur l’océan : le luxe discret d’un séjour balnéaire.'
-            },
+            
 
       ]
     
