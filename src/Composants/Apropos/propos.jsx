@@ -13,7 +13,7 @@ let Propos = ()=>{
                     </p>
                 </div>  
                 <div className="w-[100%] h-[50vh] flex  justify-center items-center  sm:h-[80vh] sm:w-1/2">
-                    <div className=" h-[400px] w-[90%]  rounded-br-[180px] rounded-tl-[180px]  overflow-hidden   sm:h-[500px] sm:w-[70%] sm:hover:scale-110 duration-300 ease-in" > 
+                    <div className=" h-[350px] w-[75%]  rounded-br-[180px] rounded-tl-[180px]  overflow-hidden   sm:h-[500px] sm:w-[70%] sm:hover:scale-110 duration-300 ease-in" > 
                         <img src="Images/a.jpg" alt="image d'illustration"  className="object-cover w-[100%] h-[100%]" />
                        
                     </div>
