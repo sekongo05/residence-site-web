@@ -136,7 +136,7 @@ let Container = ()=>{
             },
       ]
     
- return <div className=' flex flex-col justify-center w-[100%] items-center z-0' id='acceuil' >
+ return <div className=' flex flex-col justify-center w-[100%] items-center z-0'  id='acceuil' >
             <p className=' h-[80px] sm:h-[100px]' id='haut'></p>
             <div className='h-min flex   justify-center items-center  flex-col  sm:justify-between sm:w-[80%] sm:flex-row'>
                 <div className='flex flex-col   justify-center items-center w-[100%]  h-[80vh] texte  sm:w-[600px]'  >
