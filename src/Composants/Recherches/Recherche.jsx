@@ -11,7 +11,7 @@ let Recherche = ({data})=>{
     }
 
     const filtreData = data.filter(d => 
-       remvAccent( d.commune).toLowerCase().includes(search.toLocaleLowerCase()) || d.prix.includes(search)
+       remvAccent( d.commune).toLowerCase().includes(search.toLocaleLowerCase()) || d.prix.toString().includes(search)
     );
 console.log(filtreData)
   

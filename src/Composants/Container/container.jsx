@@ -1,9 +1,10 @@
 
 import './container.css'
 import Recherche from '../Recherches/Recherche';
+import {useState, useEffect } from 'react';
 
 let Container = ()=>{
-        const residences=[
+        /* const residence=[
                  {
                   'id': 1,
                   'img': 'Images/v1.jpg',
@@ -133,9 +134,33 @@ let Container = ()=>{
                   'commune': 'Abobo',
                   'prix': '60000',
                   'description': 'Appartements sécurisés avec climatisation, cuisine équipée, et balcon privé. Située à proximité des axes routiers, elle combine accessibilité et confort urbain.'
-            },
-      ]
-    
+            },  */
+      
+       
+     const [residences, setResidences] = useState([])
+
+     useEffect(()=>{
+
+           const fetchResidences = async()=>{
+                 try{
+                   
+                  const res = await fetch('https://johnny-backend.vercel.app/residences')
+                  if(!res.ok){
+                        throw new Error(`Erreur HTTP : ${res.status}`)
+                  }
+                  const data =await  res.json()
+                  setResidences(data)
+                  console.log(data)
+
+     
+                 }catch(error){
+                        console.log('Erreur API', error)
+                 }
+           }
+           fetchResidences()
+     },[]);
+
+
  return <div className=' flex flex-col justify-center w-[100%] items-center z-0'  id='acceuil' >
             <p className=' h-[80px] sm:h-[100px]' id='haut'></p>
             <div className='h-min flex   justify-center items-center  flex-col  sm:justify-between sm:w-[80%] sm:flex-row'>
