@@ -11,7 +11,7 @@ let Contact = ()=>{
                 <p className='h-[100px]'></p>
                 <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" className='text-2xl font-bold  h-[50px] flex justify-center items-end ' >Envoyez nous un message</p>
                 <div className='h-[calc(100vh-150px)] flex justify-center items-center ' >
-                    <div data-aos="zoom-in-right" className=' ct  rounded-[10px] h-[90%] w-[80%] shadow-[0_4px_20px_rgba(0,0,22,0.4)] sm:w-[450px] '>
+                    <div data-aos="fade-up"  data-aos-duration="1000"  className=' ct  rounded-[10px] h-[90%] w-[80%] shadow-[0_4px_20px_rgba(0,0,22,0.4)] sm:w-[450px] '>
                         <form action=""  className=' gap-7  h-[100%] w-[100%] flex flex-col justify-center items-center  sm:w-[450px]'>
                             <InputField type='text' name='name' placeholder='Votre nom' />
                             <InputField type='email' name='email'placeholder='Votre email'  />

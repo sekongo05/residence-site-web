@@ -5,11 +5,11 @@ let Residence = ({resi})=>{
 
     return <>
     
-            <div   data-aos="zoom-in-up" className="   w-[80%] h-[450px] flex justify-between flex-col  sm:w-[300px] " >
-                <div  className="h-[300px] w-[100%] shadow-xl/30   rounded-t-[20px] rounded-b-[20px] flex justify-center items-center overflow-hidden sm:hover:scale-90  sm:w-[300px]">
+            <div   className="   w-[80%] h-[450px] flex justify-between flex-col  sm:w-[300px] " >
+                <div  data-aos="zoom-in-up"  className="h-[300px] w-[100%] shadow-xl/30   rounded-t-[20px] rounded-b-[20px] flex justify-center items-center overflow-hidden sm:hover:scale-90  sm:w-[300px]">
                     <img src={img} alt={nom} className="object-cover shadow-lg w-full h-auto"/>
                 </div>
-                <div className="  flex   h-[150px] flex-col justify-center items-center ">
+                <div data-aos="fade-up"  data-aos-duration="2000" className="  flex   h-[150px] flex-col justify-center items-center ">
                     <p className="text-[25px] font-bold">{nom}</p>
                     <p className="text-[20px] text-orange-500 font-bold">{prix} Fcfa | 24H</p>
                     <p className=" text-[10px]  w-[300px] sm:w-[250px] text-center ">{description}</p>

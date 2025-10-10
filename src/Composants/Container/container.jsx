@@ -39,7 +39,7 @@ let Container = ()=>{
                               <p className='text-center m-[50px]'> Explorez les plus belles résidences de Côte d’Ivoire. Confort, design, et localisation idéale — votre prochain chez-vous vous attend. </p>
                                     <Recherche data={residences} />
                         </div>
-                        <div className='image flex  mb-[20px] rounded-[50%_50%_0_0] w-[80%] h-[300px]   overflow-hidden
+                        <div  data-aos="fade-up"  data-aos-duration="1000"  className='image flex  mb-[20px] rounded-[50%_50%_0_0] w-[80%] h-[300px]   overflow-hidden
                         sm:shadow-transparent sm:rounded-t-full sm:rounded-l-full sm:block sm:w-1/2 sm:overflow-hidden sm:h-[80vh] '>
                               <img  src='Images\dd.jpg' className='object-cover w-[100%] h-[100%]'/>
                         </div>
