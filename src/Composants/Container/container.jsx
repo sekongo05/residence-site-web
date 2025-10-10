@@ -4,7 +4,57 @@ import Recherche from '../Recherches/Recherche';
 import {useState, useEffect } from 'react';
 
 let Container = ()=>{
-        /* const residence=[
+  
+      
+            
+      const [residences, setResidences] = useState([])
+
+     useEffect(()=>{
+          
+           const fetchResidences = async()=>{
+                 try{
+                   
+                  const res = await fetch('https://johnny-backend.vercel.app/residences')
+                  if(!res.ok){
+                        throw new Error(`Erreur HTTP : ${res.status}`)
+                  }
+                  const data =await  res.json()
+                  setResidences(data)
+                  console.log(data)
+
+     
+                 }catch(error){
+                        console.log('Erreur API', error)
+                 }
+           }
+           fetchResidences()
+     },[]);
+
+ return <>
+            <div className=' flex flex-col justify-center w-[100%] items-center z-0'  id='acceuil' >
+                  <p className=' h-[80px] sm:h-[100px]' id='haut'></p>
+                  <div  className='h-min flex   justify-center items-center  flex-col  sm:justify-between sm:w-[80%] sm:flex-row'>
+                        <div   className='flex flex-col   justify-center items-center w-[100%]  h-[80vh] texte  sm:w-[600px]'  >
+                              <p className='text-[45px] text-center font-bold mr-[50px] ml-[50px]'>Decouvrez la residence de vos rêves</p>
+                              <p className='text-center m-[50px]'> Explorez les plus belles résidences de Côte d’Ivoire. Confort, design, et localisation idéale — votre prochain chez-vous vous attend. </p>
+                                    <Recherche data={residences} />
+                        </div>
+                        <div className='image flex  mb-[20px] rounded-[50%_50%_0_0] w-[80%] h-[300px]   overflow-hidden
+                        sm:shadow-transparent sm:rounded-t-full sm:rounded-l-full sm:block sm:w-1/2 sm:overflow-hidden sm:h-[80vh] '>
+                              <img  src='Images\dd.jpg' className='object-cover w-[100%] h-[100%]'/>
+                        </div>
+                  </div>
+            </div>
+      
+        </>
+        
+}
+export default Container;
+
+
+
+
+     /* const residence=[
                  {
                   'id': 1,
                   'img': 'Images/v1.jpg',
@@ -136,45 +186,3 @@ let Container = ()=>{
                   'description': 'Appartements sécurisés avec climatisation, cuisine équipée, et balcon privé. Située à proximité des axes routiers, elle combine accessibilité et confort urbain.'
             },  */
       
-       
-     const [residences, setResidences] = useState([])
-
-     useEffect(()=>{
-
-           const fetchResidences = async()=>{
-                 try{
-                   
-                  const res = await fetch('https://johnny-backend.vercel.app/residences')
-                  if(!res.ok){
-                        throw new Error(`Erreur HTTP : ${res.status}`)
-                  }
-                  const data =await  res.json()
-                  setResidences(data)
-                  console.log(data)
-
-     
-                 }catch(error){
-                        console.log('Erreur API', error)
-                 }
-           }
-           fetchResidences()
-     },[]);
-
-
- return <div className=' flex flex-col justify-center w-[100%] items-center z-0'  id='acceuil' >
-            <p className=' h-[80px] sm:h-[100px]' id='haut'></p>
-            <div className='h-min flex   justify-center items-center  flex-col  sm:justify-between sm:w-[80%] sm:flex-row'>
-                <div className='flex flex-col   justify-center items-center w-[100%]  h-[80vh] texte  sm:w-[600px]'  >
-                    <p className='text-[45px] text-center font-bold mr-[50px] ml-[50px]'>Decouvrez la residence de vos rêves</p>
-                    <p className='text-center m-[50px]'> Explorez les plus belles résidences de Côte d’Ivoire. Confort, design, et localisation idéale — votre prochain chez-vous vous attend. </p>
-                        <Recherche data={residences} />
-                </div>
-                <div className='image flex  mb-[20px] rounded-[50%_50%_0_0] w-[80%] h-[300px]   overflow-hidden
-                 sm:shadow-transparent sm:rounded-t-full sm:rounded-l-full sm:block sm:w-1/2 sm:overflow-hidden sm:h-[80vh] '>
-                   <img  src='Images\dd.jpg' className='object-cover w-[100%] h-[100%]'/>
-                </div>
-            </div>
-        </div>
-        
-}
-export default Container;

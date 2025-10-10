@@ -17,30 +17,23 @@ code {
 }
 
 @layer utilities {
-  .image{
-    animation: image 1.2s ease-out forwards;
+  
+  
+    .image{
+    animation: image .8s ease-in;
 }
 
 
 @keyframes image{
     0%{
-        transform: translateX(120px) scale(.95);
+        transform: translateX(120px) scale(.5);
         opacity: 0;
     }
-    25%{
-        transform: translateX(80px) scale(.97);
-        opacity: .3;
-    }
-    50%{
-        transform: translateX(40px) scale(1);
-        opacity: .6;
-    }
-    75%{
-        transform: translateX(15px);
-        opacity: .85;
-    }
+   
+    
+    
     100%{
-        transform: translateX(0px);
+        transform: translateX();
         opacity: 1;
     }
 
@@ -49,7 +42,7 @@ code {
 
 
 .texte{
-  animation: texte 1.2s ease-out forwards;
+  animation: texte .8s ease-in;
 }
 
 @keyframes texte{
@@ -57,20 +50,10 @@ code {
         transform: translateX(-120px) scale(.6);
         opacity: 0;
     }
-    25%{
-        transform: translateX(-80px) scale(.7);
-        opacity: .3;
-    }
-    50%{
-        transform: translateX(-40px) scale(.8);
-        opacity: .6;
-    }
-    75%{
-        transform: translateX(-15px) scale(.9);
-        opacity: .85;
-    }
+    
+    
     100%{
-        transform: translateX(0px) scale(1);
+        transform: translateX(0) scale(1);
         opacity: 1;
     }
 
