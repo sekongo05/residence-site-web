@@ -4,7 +4,7 @@ import {  Fragment, useEffect } from 'react';
 import Header from './Composants/Header/header';
 import Container from './Composants/Container/container';
 import Footer from './Composants/Footer/footer'
-import Contact from './Composants/Contacts/Contact';
+import Reservation from './Composants/Reservations/Reservation';
 import ReContainer from './Composants/ReContainer/ReContainer';
 import Propos from './Composants/Apropos/propos';
 import AOS from 'aos'
@@ -24,7 +24,7 @@ let App = ()=>{
                   <Container/>
                   <ReContainer   />
                   <Propos />
-                  <Contact />
+                  <Reservation />
                   <Footer/>
             </Fragment>
       )

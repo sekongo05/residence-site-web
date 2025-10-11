@@ -18,7 +18,7 @@ let Header1 = ()=>{
                             <li><a href='#acceuil'>Acceuil</a></li>
                             <li><a href='#residence'>Résidences</a></li>
                             <li><a href='#propos'>À Propos</a></li>
-                            <li><a href='#contact'>Contactez-Nous</a></li>
+                            <li><a href='#reserv'>Reservation</a></li>
                         </ul>
                         <img  src='Icons/menu.png'
                               alt='icon du menu'  
@@ -36,7 +36,7 @@ let Header1 = ()=>{
                             <li><a href='#acceuil' onClick={()=> setMenuOpen(false)}>Acceuil</a></li>
                             <li><a href='#residence' onClick={()=> setMenuOpen(false)}>Résidences</a></li>
                             <li><a href='#propos' onClick={()=> setMenuOpen(false)}>À Propos</a></li>
-                            <li><a href='#contact' onClick={()=> setMenuOpen(false)}>Contact</a></li>
+                            <li><a href='#reserv' onClick={()=> setMenuOpen(false)}>Reservation</a></li>
                         </ul>
                         <p className=' flex justify-end h-[200px] w-[25%]'><img src='Icons/f.png' alt='icon de fermeture' className='w-[26px] h-[30px]' onClick={()=> setMenuOpen(false)}/></p>
                 </div>
