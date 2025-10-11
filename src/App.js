@@ -1,14 +1,17 @@
-
+import {   Routes, Route } from 'react-router-dom';
 import './App.css';
 import {  Fragment, useEffect } from 'react';
 import Header from './Composants/Header/header';
-import Container from './Composants/Container/container';
+import Acceuil from './Composants/Acceuil/Acceuil';
 import Footer from './Composants/Footer/footer'
-import Reservation from './Composants/Reservations/Reservation';
+import MesReservations from './Pages/MesReservations/MesReservations';
+import Reservations from './Composants/Reservations/Reservation';
 import ReContainer from './Composants/ReContainer/ReContainer';
 import Propos from './Composants/Apropos/propos';
 import AOS from 'aos'
+
 import 'aos/dist/aos.css';
+import Reservation from './Composants/Reservations/Reservation';
 
 let App = ()=>{
 
@@ -19,15 +22,21 @@ let App = ()=>{
             })
       }, []);
       
-      return ( <Fragment>
+      return  <>
+           
                   <Header/>
-                  <Container/>
-                  <ReContainer   />
+                  <Acceuil/>
+                  <ReContainer/>
                   <Propos />
-                  <Reservation />
+                  <Reservations />
+                  <Routes>
+                        <Route path="/reservation"  element={<MesReservations/>}/>         
+                  </Routes>
                   <Footer/>
-            </Fragment>
-      )
+           
+           
+             </>
+      
 }
 
 export default App

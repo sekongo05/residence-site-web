@@ -1,9 +1,9 @@
 
-import './container.css'
+import './Acceuil.css'
 import Recherche from '../Recherches/Recherche';
 import {useState, useEffect } from 'react';
 
-let Container = ()=>{
+let Acceuil = ()=>{
   
       
             
@@ -49,7 +49,7 @@ let Container = ()=>{
         </>
         
 }
-export default Container;
+export default Acceuil;
 
 
 
