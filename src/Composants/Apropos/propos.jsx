@@ -2,7 +2,7 @@ let Propos = ()=>{
 
 
     return <>
-            <div  id="propos"  className="h-[100px] sm:h-[20px]"></div>
+            <div  id="propos"  className="h-[20px] sm:h-[20px]"></div>
             <div className="h-min w-full  flex flex-col  overflow-hidden sm:flex sm:flex-row sm:mt-[100px]" >
                 <div id="propos"  className="w-[100%]   h-[80vh] flex justify-center items-center flex-col sm:w-1/2 ">
                     <p data-aos="fade-up" className="text-orange-500 mt-[30px]    text-center font-bold text-[35px]  h-[100px] w-[400px] sm:mt-[40px]  "> À Propos <span className="text-black"> de Nous </span> </p>

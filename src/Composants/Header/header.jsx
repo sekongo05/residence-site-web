@@ -11,8 +11,8 @@ let Header1 = ()=>{
 
     return <Fragment>
                 <div className='flex justify-between pr-[50px] w-full z-50 pl-[50px] items-center h-[100px] sm:h-[70px] fixed bg-orange-100'>
-                        <a href="#acceuil"><div  className='font-extrabold text-[25px] cursor-pointer text-orange-400 flex justify-center' >
-                            <img src='Icons/home.png' className='w-[20%] h-[30px]' /> Johnny <span className='text-black font-extrabold text-[25px]'>House</span>
+                        <a href="#acceuil"><div  className='font-extrabold text-[25px] cursor-pointer text-orange-500 flex justify-center' >
+                            Sk <span className='text-black font-extrabold text-[25px]'>House</span> <img src='Icons/accueil.png' className='w-[20%] h-[30px]' />
                         </div></a>
                         <ul className='hidden  sm:flex sm:gap-[15px]' >
                             <li><a href='#acceuil'>Acceuil</a></li>
@@ -20,7 +20,7 @@ let Header1 = ()=>{
                             <li><a href='#propos'>À Propos</a></li>
                             <li><a href='#reserv'>Reservation</a></li>
                         </ul>
-                        <img  src='Icons/menu.png'
+                        <img  src='Icons/m.png'
                               alt='icon du menu'  
                               onClick={()=> setMenuOpen(!menuOpen)}
                                 className='w-[25px] h-[25px] cursor-pointer  sm:hidden'/>

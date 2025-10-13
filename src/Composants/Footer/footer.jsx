@@ -4,7 +4,7 @@ import './footer.css'
 let Footer = ()=>{
 
 
-    return <div className='bg-black w-full  h-[90px] flex flex-col  justify-center items-center  '>
+    return <div className='bg-black mt-[100px] w-full  h-[90px] flex flex-col  justify-center items-center  '>
                 <div className='flex  w-[100%] justify-center items-center text-white'>
                     <div className='flex pl-[20px] sm:pl-[100px]  h-[50px] w-[80%] justify-center  items-center text-white gap-5 '>
                         <p><img src='Icons/facebook (1).png' className='w-[30px]' alt="Lien vers Facebook"/></p>
