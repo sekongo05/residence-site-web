@@ -2,32 +2,78 @@ import { useState } from 'react';
 import './Reservation.css'
 import InputField from '../InputField/InputField';
 import Button from '../Button/Button';
+import axios from 'axios'
 let Reservation = ()=>{
-   
+   const [nom, setNom] =useState('');
+   const [prenom, setPrenom] =useState('');
+   const [email, setEmail] =useState('');
+   const [nom_residence, setResidence] =useState('');
+   const [date_debut, setDebut] =useState('');
+   const [date_fin, setFin] =useState('');
 
+    const submit = async(e)=>{
+        e.preventDefault();
+         const reservationData ={
+            nom,prenom,email,nom_residence,date_debut,date_fin
+         };
+         try{
+            await axios.post('https://johnny-backend.vercel.app/reservations',reservationData)
+            alert('Réservation Enregistrée.')
+         }catch(error){
+            console.log('AxiosError :', error.message);
+            console.log('Status :', error.response?.status);
+            console.log('Data :', error.response?.data);
 
+         }
+    }
 
     return <div className='h-min  ' id='reserv' >
                 <p className='h-[100px]'></p>
                 <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" className='text-2xl font-bold  text-[35px] text-orange-500   h-[100px] gap-2 w-full flex justify-center items-center ' > Reservez<span className='text-black'> maintenant </span> </p>
                 <div className='h-min flex justify-center items-center p-2  -red-400 sm:hidden'  >
                     <div data-aos="fade-up"  data-aos-duration="1000"  className=' ct  rounded-[10px] h-[40%] w-[85%] shadow-[0_4px_20px_rgba(0,0,22,0.4)] sm:w-[450px] '>
-                        <form action=""  className=' gap-7  h-min p-2 w-[100%] flex flex-col justify-center items-center  sm:w-[450px]'>
+                        <form onSubmit={submit} className=' gap-7  h-min p-2 w-[100%] flex flex-col justify-center items-center  sm:w-[450px]'>
                            <div className='flex justify-between  w-[100%] ' > 
                                 <label htmlFor="nom" className='w-[40%] flex text-orange-500  font-bold justify-start items-center'>Nom</label>
-                                <InputField type='text' name='nom'  id='nom' placeholder='Votre nom'/>
+                                <InputField 
+                                            type='text'
+                                            name='nom'
+                                            id='nom'
+                                            placeholder='Votre nom'
+                                            value={nom}
+                                            onChange={(e) => setNom(e.target.value)}
+                                            />
                            </div>
                            <div className='flex justify-between  w-[100%]'>
                                 <label htmlFor="pre" className='w-[40%] flex text-orange-500  font-bold  justify-start items-center'>Prenom</label>
-                                <InputField type='text' name='prenom'  id='pre' placeholder='Votre prenom'/>
+                                <InputField
+                                             type='text'
+                                             name='prenom'
+                                             id='pre'
+                                             placeholder='Votre prenom'
+                                             value={prenom}
+                                             onChange={(e) => setPrenom(e.target.value)}
+                                             />
                            </div>
                            <div className='flex justify-between  w-[100%]'>
                                 <label htmlFor="mail" className='w-[40%] flex text-orange-500  font-bold justify-start items-center' > Email</label>
-                                <InputField type='email' name='email' id='mail'  placeholder=' votre mail'/>
+                                <InputField 
+                                            type='email'
+                                            name='email'
+                                            id='mail'
+                                            placeholder=' votre mail'
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            />
                            </div>
                            <div className='flex justify-between w-[100%]'>
                                 <label htmlFor="choix" className='w-[40%] flex font-bold  text-orange-500 justify-start items-center' >Résidence</label>
-                                <select id='choix' className='shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2 focus:shadow-orange-500 focus:outline-none'>
+                                <select 
+                                        id='choix'
+                                        name='residence'
+                                        value={nom_residence}
+                                        onChange={(e) => setResidence(e.target.value)}
+                                        className='shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2 focus:shadow-orange-500 focus:outline-none'>
                                     <option value=""></option>
                                     <option>Residence Nova</option>
                                     <option>Résidence Assinie Bleu</option>
@@ -38,11 +84,23 @@ let Reservation = ()=>{
                            
                            <div className='flex justify-between  w-[100%]'>
                                 <label htmlFor="deb" className='w-[40%] flex  font-bold text-orange-500  justify-start items-center'> Date début </label>
-                                <InputField type='date' name='debut' id='deb'/>
+                                <InputField
+                                             type='date'
+                                             name='date_debut'
+                                             id='deb'
+                                             value={date_debut}
+                                             onChange={(e) => setDebut(e.target.value)}
+                                             />
                            </div>
                            <div className='flex justify-between  w-[100%]'>
                                 <label htmlFor="end" className='w-[40%] flex  font-bold text-orange-500  justify-start items-center'> Date fin </label>
-                                <InputField type='date' name='fin' id='end'/>
+                                <InputField 
+                                             type='date'
+                                             name='date_fin'
+                                             id='end'
+                                             value={date_fin}
+                                             onChange={(e) => setFin(e.target.value)}
+                                            />
                            </div>
                            <div>
                             <p className='font-bold justify-center items-center text-center'>{/* Vous allez devoir payer 50.000f pour les 2 jours */}</p>
@@ -63,7 +121,12 @@ let Reservation = ()=>{
                             <div className='flex -4 -green-600 w-[1000px] justify-center gap-20 items-center'>
                                 <div className='flex     w-[45%]'>
                                     <label htmlFor="nom" className='w-[30%] flex text-orange-500  font-bold justify-start items-center' > Nom</label>
-                                    <InputField type='text' name='nom' id='nom'  placeholder=' votre nom'/>
+                                    <InputField 
+                                                type='text'
+                                                name='nom' id='nom'
+                                                placeholder=' votre nom'
+                                                
+                                                />
                                 </div>
                                 <div className='flex justify-between  w-[45%]'>
                                     <label htmlFor="choix" className='w-[30%] text-orange-500  flex font-bold justify-start items-center' >Résidence</label>

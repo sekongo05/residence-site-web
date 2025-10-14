@@ -36,7 +36,7 @@ console.log(filtreData)
 
                                     filtreData.map((item) => (
                                         <li key={item.id}> 
-                                            {item.nom} - <span className="text-orange-500"> {item.prix} Fcfa </span><span className="font-light">({item.commune})</span> 
+                                            {item.nom_residence} - <span className="text-orange-500"> {item.prix} Fcfa </span><span className="font-light">({item.commune})</span> 
                                         </li>
                                     ))): (
                                         <li>Aucune résidence trouvé </li>

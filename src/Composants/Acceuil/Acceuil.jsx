@@ -1,4 +1,4 @@
-
+import axios  from 'axios';
 import './Acceuil.css'
 import Recherche from '../Recherches/Recherche';
 import {useState, useEffect } from 'react';
@@ -11,18 +11,13 @@ let Acceuil = ()=>{
 
      useEffect(()=>{
           
-           const fetchResidences = async()=>{
+           const fetchResidences = async() =>{
                  try{
                    
-                  const res = await fetch('https://johnny-backend.vercel.app/residences')
-                  if(!res.ok){
-                        throw new Error(`Erreur HTTP : ${res.status}`)
-                  }
-                  const data =await  res.json()
-                  setResidences(data)
-                  console.log(data)
-
-     
+                  const res = await axios.get('https://johnny-backend.vercel.app/residences')                  
+                  const datab =await  res.data
+                  setResidences(datab)
+                  console.log('les residences sont', datab)
                  }catch(error){
                         console.log('Erreur API', error)
                  }
