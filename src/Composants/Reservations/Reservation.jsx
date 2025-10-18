@@ -100,7 +100,6 @@ fetchResidence()
                                 <select 
                                         id='choix'
                                         name='nom_residence'
-                                       
                                         onChange={handlechange}
                                         className='shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2 focus:shadow-orange-500 focus:outline-none'>
                                     <option value="" disabled>Choisir une résidence</option>
@@ -113,6 +112,24 @@ fetchResidence()
                                         ))}
                                 </select>
                            </div> 
+                           <div className='flex justify-between  w-[100%]'>
+                                <label htmlFor="prix" className='w-[40%] flex  font-bold text-orange-500  justify-start items-center'>Prix (Fcfa) </label>
+                                        <input type="text" 
+                                            id='prix'
+                                            className=' shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2  sm:h-[50px] sm:w-[70%] focus:shadow-orange-500 focus:outline-none'
+                                            value={residence.find((r)=> r.nom_residence === formData.nom_residence)?.prix || ""}
+                                            readOnly 
+                                             />
+                           </div>
+                           <div className='flex justify-between  w-[100%]'>
+                                <label htmlFor="commune" className='w-[40%] flex  font-bold text-orange-500  justify-start items-center'>Commune </label>
+                                        <input type="text" 
+                                            id='commune'
+                                            className=' shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2  sm:h-[50px] sm:w-[70%] focus:shadow-orange-500 focus:outline-none'
+                                            value={residence.find((r)=> r.nom_residence === formData.nom_residence)?.commune || ""}
+                                            readOnly 
+                                             />
+                           </div>
                            <div className='flex justify-between  w-[100%]'>
                                 <label htmlFor="deb" className='w-[40%] flex  font-bold text-orange-500  justify-start items-center'> Date début </label>
                                 <input              
@@ -146,6 +163,7 @@ fetchResidence()
                             </div>
                         </form>
                         {message && <p className='border-2 h-[80px] flex justify-center  items-center text-[26px] font-bold '>{message}</p>}
+                        <p> Felicitation </p>
                     </div>
                     
                 </div>
@@ -159,13 +177,13 @@ fetchResidence()
                                     <label htmlFor="nom" className='w-[30%] flex text-orange-500  font-bold justify-start items-center' > Nom</label>
                                     <input 
                                     type='text'
-                                            name='nom'
-                                            id='nom'
-                                            placeholder='Votre nom'
-                                            value={formData.nom}
-                                            onChange={handlechange}  
-                                            className=' shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2  sm:h-[50px] sm:w-[70%] focus:shadow-orange-500 focus:outline-none'
-                                             required
+                                    name='nom'
+                                    id='nom'
+                                    placeholder='Votre nom'
+                                    value={formData.nom}
+                                    onChange={handlechange}  
+                                    className=' shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2  sm:h-[50px] sm:w-[70%] focus:shadow-orange-500 focus:outline-none'
+                                    required
                                     />
                                 </div>
                                 <div className='flex justify-between  w-[45%]'>
@@ -175,14 +193,37 @@ fetchResidence()
                                             onChange={handlechange}
                                             className='shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[50px] pl-2 focus:shadow-orange-500 focus:outline-none'>
                                         <option value="" disabled>Choisir une résidence</option>
-                                        {residence.map((r)=>(
 
-                                    <option  key={r.id} value={r.nom_residence}>
+                                            {residence.map((r)=>(
+                                                <option  key={r.id} value={r.nom_residence}>
                                             {r.nom_residence}
 
                                     </option>
-                                        ))}
+                                       
+                                    ))}
                                     </select>                                  
+                                </div>
+                            </div>
+                            <div className='flex  -4 -pink-700 w-[1000px] justify-between items-center'>
+                                <div className='flex justify-between    w-[45%]'>
+
+                                    <label htmlFor="prix" className='w-[30%]  text-orange-500  flex font-bold   justify-start items-center'> Prix (Fcfa) </label>
+                                    <input type="text" 
+                                            className=' shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2  sm:h-[50px] sm:w-[70%] focus:shadow-orange-500 focus:outline-none'
+                                            id='prix'
+                                            value={residence.find((r)=> r.nom_residence === formData.nom_residence)?.prix || ""}
+                                            readOnly 
+                                             />
+                                </div>
+                                <div className='flex justify-between    w-[45%]'>
+
+                                    <label htmlFor="com" className='w-[30%]  text-orange-500  flex font-bold   justify-start items-center'> commune </label>
+                                    <input type="text" 
+                                            className=' shadow-[0_2px_5px_rgba(0,0,12,0.4)] w-[70%]  h-[35px] pl-2  sm:h-[50px] sm:w-[70%] focus:shadow-orange-500 focus:outline-none'
+                                            id='com'
+                                            value={residence.find((r)=> r.nom_residence === formData.nom_residence)?.commune || ""}
+                                            readOnly 
+                                             />
                                 </div>
                             </div>
                             <div className='flex  -4 -pink-700 w-[1000px] justify-between items-center'>
