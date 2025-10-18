@@ -14,7 +14,7 @@ let Acceuil = ()=>{
            const fetchResidences = async() =>{
                  try{
                    
-                  const res = await axios.get('https://johnny-backend.vercel.app/residences')                  
+                  const res = await axios.get('https://johnny-backend-lz4l.onrender.com/residences')                  
                   const datab =await  res.data
                   setResidences(datab)
                   console.log('les residences sont', datab)
