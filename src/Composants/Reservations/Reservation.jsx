@@ -52,7 +52,7 @@ fetchResidence()
 
     return <div className='h-min  ' id='reserv' >
                 <p className='h-[100px]'></p>
-                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" className='text-2xl font-bold  text-[35px] text-orange-500   h-[100px] gap-2 w-full flex justify-center items-center ' > Reservez<span className='text-black'> maintenant </span> </p>
+                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" className='text-2xl font-bold  text-[35px] text-orange-500   h-[100px] gap-2 w-full flex justify-center items-center ' > Réservez<span className='text-black'> maintenant </span> </p>
                 <div className='h-min flex justify-center items-center p-2  -red-400 sm:hidden'  >
                     <div data-aos="fade-up"  data-aos-duration="1000"  className=' ct  rounded-[10px] h-[40%] w-[85%] shadow-[0_4px_20px_rgba(0,0,22,0.4)] sm:w-[450px] '>
                         <form onSubmit={handlesubmit} className=' gap-7  h-min p-2 w-[100%] flex flex-col justify-center items-center  sm:w-[450px]'>
@@ -162,8 +162,8 @@ fetchResidence()
                             <Button type='submit' name='valider' nom="Reserver"/>
                             </div>
                         </form>
-                        {message && <p className='border-2 h-[80px] flex justify-center  items-center text-[26px] font-bold '>{message}</p>}
-                        <p> Felicitation </p>
+                        {message && <p className=' h-[80px] flex justify-center  items-center text-[26px] font-bold '>{message}</p>}
+                        
                     </div>
                     
                 </div>
@@ -289,7 +289,7 @@ fetchResidence()
                             </div>
 
                         </form>
-                                    {message && <p className='border-2 h-[80px] flex justify-center  items-center text-[26px] font-bold '>{message}</p>}
+                                    {message && <p className=' h-[80px] flex justify-center  items-center text-[26px] font-bold '>{message}</p>}
                     </div>
                 </div> 
             </div>
